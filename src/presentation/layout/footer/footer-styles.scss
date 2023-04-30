@@ -1,0 +1,40 @@
+@import '@/presentation/styles/main.scss';
+
+.footer {
+  @include padding();
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30vh;
+  width: 100vw;
+  background-color: $black;
+
+  .footerAbout,
+  .footerContact,
+  .footerConnect {
+    a {
+      all: unset;
+      cursor: pointer;
+    }
+
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    align-items: flex-start;
+    gap: 8px;
+    color: $white;
+
+    h5 {
+      font-weight: 500;
+    }
+
+    h6 {
+      font-weight: 300;
+    }
+  }
+
+  .footerSocialMedia {
+    display: flex;
+    gap: 16px;
+  }
+}
