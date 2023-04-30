@@ -1,0 +1,54 @@
+@import '@/presentation/styles/main.scss';
+
+.shopCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px 8px;
+  width: 25rem;
+  height: 30rem;
+
+  .image {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .tshirtImage {
+      width: 284px;
+      height: auto;
+      box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.10);
+    }
+
+    .menuIcon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px;
+      bottom: 16px;
+      right: 0;
+      width: 80px;
+      height: 40px;
+      font-weight: 400;
+      background-color: $white;
+      color: $black;
+      box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.10);
+    }
+  }
+
+  .shopLabel {
+    width: 100%;
+    padding: 8px 0;
+
+    h6 {
+      font-weight: 400;
+
+      span {
+        font-weight: 300;
+        opacity: 0.6;
+      }
+    }
+  }
+}

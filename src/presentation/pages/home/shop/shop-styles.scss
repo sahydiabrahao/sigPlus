@@ -1,0 +1,30 @@
+@import '@/presentation/styles/main.scss';
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30rem;
+    padding: 1.6rem 0;
+
+    a {
+      all: unset;
+      cursor: pointer;
+    }
+
+    h5 {
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+
+
+}
