@@ -1,0 +1,48 @@
+@import '@/presentation/styles/main.scss';
+
+.header {
+  @include padding();
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12vh;
+  width: 100vw;
+  background-color: $black;
+  color: $white;
+
+  .ttsLogo {
+    max-width: 14.2 rem;
+    height: auto;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30rem;
+
+    a {
+      all: unset;
+      cursor: pointer;
+    }
+
+    h5 {
+      font-weight: 300;
+      cursor: pointer;
+    }
+  }
+
+  .menuIcon {
+    display: flex;
+    justify-content: flex-end;
+    width: 14.2rem;
+    height: auto;
+
+    .cartIcon {
+      fill: $white;
+      width: 2.8rem;
+      height: auto;
+    }
+  }
+}
