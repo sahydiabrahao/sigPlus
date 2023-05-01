@@ -38,11 +38,127 @@
     justify-content: flex-end;
     width: 12rem;
     height: auto;
+    cursor: pointer;
 
     .cartIcon {
       fill: $white;
       width: 2.8rem;
       height: auto;
     }
+  }
+}
+
+
+.modalCart {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  top: 12vh;
+  right: 0;
+  height: 140vh;
+  width: 480px;
+  gap: 1.6rem;
+  background-color: $white;
+  z-index: 1;
+  box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+
+  .modalHeader {
+    height: 4vh;
+    padding: 0.8rem;
+    background-color: $black;
+
+    h6 {
+      text-align: center;
+      font-weight: 400;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .closeButton {
+      all: unset;
+      display: flex;
+      align-items: top;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+
+  .modalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 0 0.8rem;
+    color: $black;
+
+    h5 {
+      font-weight: 500;
+    }
+
+
+
+    .modalTotal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: solid 1px $black;
+
+      h6 {
+        font-weight: 500;
+      }
+    }
+
+    .checkoutButton {
+      all: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $black;
+      color: $white;
+      width: 100%;
+      height: 4.2rem;
+      font-size: 1.6rem;
+      box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.10);
+      cursor: pointer;
+    }
+
+  }
+}
+
+.modalCartShow {
+  @extend .modalCart;
+  display: flex;
+  width: 40rem;
+  animation: slide-in 0.4s ease-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  100% {
+    width: 480px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    width: 480px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 0;
+    opacity: 0;
   }
 }

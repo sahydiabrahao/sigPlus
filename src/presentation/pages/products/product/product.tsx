@@ -17,7 +17,7 @@ const Product: React.FC = () => {
             <h5>$ 49.99</h5>
           </div>
           <div className={Styles.productColor}>
-            <h5>Colors</h5>
+            <h5>Color</h5>
             <div className={Styles.colorToggle}>
               <button className={Styles.radioButton}>T-shirt</button>
               <button className={Styles.radioButton}>Design</button>

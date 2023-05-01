@@ -1,0 +1,55 @@
+@import '@/presentation/styles/main.scss';
+
+.modalCard {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  gap: 0.8rem;
+
+  .cardTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    h6 {
+      font-weight: 400;
+
+      span {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .cardDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cardQauntity {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 10rem;
+
+      button {
+        all: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        font-size: 2.4rem;
+        font-weight: 300;
+        cursor: pointer;
+      }
+    }
+
+
+    h6 {
+      font-weight: 300;
+    }
+  }
+}

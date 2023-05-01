@@ -39,7 +39,6 @@ const Footer: React.FC = () => {
           <h6>Designed & Built by Sahydi Abrahão</h6>
           <h6>Hero image by <a href='https://unsplash.com/pt-br/@faithandyarn_'>Faith & Yarn</a></h6>
         </div>
-
       </section>
     </>
   )
