@@ -4,7 +4,13 @@ import React from 'react'
 import TshirtLogo from '../tshirt-logo/tshirt-logo'
 import Tshirt from '../tshirt-color/tshirt-color'
 
-const ShopCard: React.FC = () => {
+interface Props {
+  tshirtColor: string
+  logoName: string
+  fillColor: string
+}
+
+const ShopCard = ({ tshirtColor, logoName, fillColor }: Props): any => {
   return (
     <div className={Styles.shopCard}>
     <div className={Styles.image}>
@@ -13,9 +19,9 @@ const ShopCard: React.FC = () => {
         <p>Add</p>
       </div>
       <a href='/products'>
-        <Tshirt tshirtColor="coral"/>
+        <Tshirt tshirtColor={tshirtColor}/>
         <div className={Styles.tshirtLogo}>
-          <TshirtLogo logoName='triangle' fillColor="white" />
+          <TshirtLogo logoName={logoName} fillColor={fillColor}/>
         </div>
       </a>
     </div>

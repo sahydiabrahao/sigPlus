@@ -14,14 +14,22 @@ const Shop: React.FC = () => {
         </div>
 
         <div className={Styles.shopItems}>
-            <ShopCard />
-            <ShopCard />
-            <ShopCard />
-            <ShopCard />
-            <ShopCard />
-            <ShopCard />
-            <ShopCard />
-            <ShopCard />
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
         </div>
 
         <div className={Styles.shopPagination}>
