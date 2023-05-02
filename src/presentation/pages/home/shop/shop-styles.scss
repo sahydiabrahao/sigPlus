@@ -9,6 +9,7 @@
   justify-content: flex-start;
   height: 100vh;
   width: 100vw;
+  color: $black;
 
   .shopMenu {
     display: flex;
@@ -16,6 +17,7 @@
     justify-content: space-between;
     width: 30rem;
     padding: 1.6rem 0;
+
 
     a {
       all: unset;
@@ -31,6 +33,11 @@
   .shopItems {
     display: flex;
     flex-wrap: wrap;
+
+    a {
+      color: unset;
+      text-decoration: unset;
+    }
   }
 
 
@@ -41,6 +48,7 @@
     width: 30%;
     height: 20vh;
 
+
     button {
       all: unset;
       display: flex;
@@ -48,7 +56,8 @@
       justify-content: center;
       width: 128px;
       height: 40px;
-      border-bottom: solid 1px $black;
+      color: $primary;
+      border-bottom: solid 1px $primary;
       font-size: 1.4rem;
       font-weight: 400;
       cursor: pointer;

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import React from 'react'
-import { MakeHome, MakeProducts } from '../pages'
+import { MakeHome, MakePaymentAccount, MakeProducts } from '../pages'
 
 const Router: React.FC = () => {
   return (
@@ -8,6 +8,7 @@ const Router: React.FC = () => {
       <Routes>
         <Route path="/" element={<MakeHome />} />
         <Route path="/products" element={<MakeProducts />} />
+        <Route path="/payment-account" element={<MakePaymentAccount />} />
       </Routes>
     </BrowserRouter>
   )

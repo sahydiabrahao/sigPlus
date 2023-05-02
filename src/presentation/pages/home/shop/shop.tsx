@@ -11,18 +11,17 @@ const Shop: React.FC = () => {
           <a href="/"><h5>T-shirt</h5></a>
           <a href="#"><h5>Design</h5></a>
           <a href="#"><h5>Tint</h5></a>
-          <a href='/products'>Products</a>
         </div>
 
         <div className={Styles.shopItems}>
-          <ShopCard />
-          <ShopCard />
-          <ShopCard />
-          <ShopCard />
-          <ShopCard />
-          <ShopCard />
-          <ShopCard />
-          <ShopCard />
+            <ShopCard />
+            <ShopCard />
+            <ShopCard />
+            <ShopCard />
+            <ShopCard />
+            <ShopCard />
+            <ShopCard />
+            <ShopCard />
         </div>
 
         <div className={Styles.shopPagination}>

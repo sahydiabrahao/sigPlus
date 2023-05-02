@@ -8,7 +8,7 @@
   justify-content: space-between;
   height: 12vh;
   width: 100vw;
-  background-color: $black;
+  background-color: $primary;
   color: $white;
 
   .ttsLogo {
@@ -55,8 +55,8 @@
   flex-direction: column;
   top: 12vh;
   right: 0;
-  height: 140vh;
-  width: 480px;
+  min-height: 100vh;
+  width: 40rem;
   gap: 1.6rem;
   background-color: $white;
   z-index: 1;
@@ -66,7 +66,7 @@
   .modalHeader {
     height: 4vh;
     padding: 0.8rem;
-    background-color: $black;
+    background-color: $primary;
 
     h6 {
       text-align: center;
@@ -101,17 +101,17 @@
       font-weight: 500;
     }
 
-
-
     .modalTotal {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
       border-bottom: solid 1px $black;
+      color: $black;
+
 
       h6 {
-        font-weight: 500;
+        font-weight: 400;
       }
     }
 
@@ -120,13 +120,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: $black;
+      background-color: $primary;
       color: $white;
       width: 100%;
       height: 4.2rem;
       font-size: 1.6rem;
-      box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.10);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
       cursor: pointer;
+
+      &:hover {
+        background: $primaryDark;
+        box-shadow: 0px 2px 4px -1px #00000033, 0px 4px 5px 0px #00000024, 0px 1px 10px 0px #0000001f;
+      }
     }
 
   }
