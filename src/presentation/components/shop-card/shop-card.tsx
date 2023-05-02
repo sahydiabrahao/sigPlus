@@ -1,7 +1,8 @@
-import tshirtImage from '@/presentation/assets/tshirt.png'
 import { FaCartPlus } from 'react-icons/fa'
 import Styles from './shop-card-styles.scss'
 import React from 'react'
+import TshirtLogo from '../tshirt-logo/tshirt-logo'
+import Tshirt from '../tshirt-color/tshirt-color'
 
 const ShopCard: React.FC = () => {
   return (
@@ -12,8 +13,10 @@ const ShopCard: React.FC = () => {
         <p>Add</p>
       </div>
       <a href='/products'>
-
-        <img className={Styles.tshirtImage} src={tshirtImage} />
+        <Tshirt tshirtColor="coral"/>
+        <div className={Styles.tshirtLogo}>
+          <TshirtLogo logoName='triangle' fillColor="white" />
+        </div>
       </a>
     </div>
     <div className={Styles.shopLabel}>
