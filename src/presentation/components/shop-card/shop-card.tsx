@@ -22,7 +22,7 @@ const ShopCard = ({ tshirtColor, logoName, fillColor }: Props): any => {
         <FaCartPlus className={Styles.iconAddCart} />
         <p>Add</p>
       </div>
-      <a href='/products'>
+      <a href='/products' >
         <Tshirt tshirtColor={tshirtColor}/>
         <div className={Styles.tshirtLogo}>
           <TshirtLogo logoName={logoName} fillColor={fillColor}/>
