@@ -2,6 +2,7 @@ import Styles from './header-styles.scss'
 import React, { useState } from 'react'
 import ModalCard from '@/presentation/components/modal-card/modal-card'
 import { FaShoppingCart } from 'react-icons/fa'
+import { useAppSelector } from '@/presentation/hooks/hooks'
 
 const Header: React.FC = () => {
   const [onModalShow, useOnModalShow] = useState(false)
@@ -10,6 +11,7 @@ const Header: React.FC = () => {
     useOnModalShow(!onModalShow)
   }
 
+  const numOfCartItems = useAppSelector(state => state.shoppingCart.numOfCartItems)
   return (
     <>
       <section id='header' className={Styles.header}>
@@ -26,6 +28,7 @@ const Header: React.FC = () => {
         </div>
         <a className={Styles.menuIcon} onClick={onShowModal}>
           <FaShoppingCart className={Styles.cartIcon}/>
+          {numOfCartItems === 0 ? null : <span>{numOfCartItems}</span>}
         </a>
 
         <div className={onModalShow ? Styles.modalCartShow : Styles.modalCart}>

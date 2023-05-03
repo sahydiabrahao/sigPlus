@@ -34,6 +34,7 @@
   }
 
   .menuIcon {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     width: 12rem;
@@ -44,6 +45,22 @@
       fill: $white;
       width: 2.8rem;
       height: auto;
+    }
+
+    span {
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      width: 21px;
+      height: auto;
+      background-color: $primaryDark;
+      border-radius: 50%;
+
     }
   }
 }
