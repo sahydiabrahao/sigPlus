@@ -1,17 +1,13 @@
 import Styles from './header-styles.scss'
-import React, { useState } from 'react'
-import ModalCard from '@/presentation/components/modal-card/modal-card'
+import React from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
-import { useAppSelector } from '@/presentation/hooks/hooks'
+import { useAppDispatch, useAppSelector } from '@/presentation/hooks/hooks'
+import { showModal } from '@/presentation/redux/modal-slice'
 
 const Header: React.FC = () => {
-  const [onModalShow, useOnModalShow] = useState(false)
-
-  const onShowModal = (): void => {
-    useOnModalShow(!onModalShow)
-  }
-
+  const dispatch = useAppDispatch()
   const numOfCartItems = useAppSelector(state => state.shoppingCart.numOfCartItems)
+
   return (
     <>
       <section id='header' className={Styles.header}>
@@ -26,33 +22,10 @@ const Header: React.FC = () => {
           <a href="#"><h5>Design</h5></a>
           <a href="#"><h5>Tint</h5></a>
         </div>
-        <a className={Styles.menuIcon} onClick={onShowModal}>
+        <a className={Styles.menuIcon} onClick={() => dispatch(showModal())}>
           <FaShoppingCart className={Styles.cartIcon}/>
           {numOfCartItems === 0 ? null : <span>{numOfCartItems}</span>}
         </a>
-
-        <div className={onModalShow ? Styles.modalCartShow : Styles.modalCart}>
-          <div className={Styles.modalHeader}>
-            <h6> <span>THE TSHIRT SPOT</span>, where style meets comfort!</h6>
-          </div>
-          <div className={Styles.modalBody}>
-            <h5> Cart </h5>
-
-            <ModalCard />
-            <ModalCard />
-
-            <div className={Styles.modalTotal}>
-              <h6> Total </h6>
-              <div>
-                <h6>
-                  $ 149.97
-                </h6>
-              </div>
-            </div>
-            <a href='/payment-account' className={Styles.checkoutButton}>Checkout</a>
-          </div>
-
-        </div>
       </section>
     </>
   )

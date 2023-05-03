@@ -4,7 +4,7 @@ import Tshirt from '../tshirt-color/tshirt-color'
 import Styles from './shop-card-styles.scss'
 import React from 'react'
 import { useAppDispatch } from '@/presentation/hooks/hooks'
-import { addItemToCart } from '@/presentation/redux/shopping-cart/shopping-cart-slice'
+import { addItemToCart } from '@/presentation/redux/shopping-cart-slice'
 
 interface Props {
   tshirtColor: string

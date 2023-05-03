@@ -1,88 +1,37 @@
 @import '@/presentation/styles/main.scss';
 
-.header {
-  @include padding();
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 12vh;
-  width: 100vw;
-  background-color: $primary;
-  color: $white;
-
-  .ttsLogo {
-    width: 12rem;
-    height: auto;
-  }
-
-  .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 30rem;
-
-    a {
-      all: unset;
-      cursor: pointer;
-    }
-
-    h5 {
-      font-weight: 300;
-      cursor: pointer;
-    }
-  }
-
-  .menuIcon {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    width: 12rem;
-    height: auto;
-    cursor: pointer;
-
-    .cartIcon {
-      fill: $white;
-      width: 2.8rem;
-      height: auto;
-    }
-
-    span {
-      position: absolute;
-      top: -5px;
-      right: -10px;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 1.2rem;
-      width: 21px;
-      height: auto;
-      background-color: $primaryDark;
-      border-radius: 50%;
-
-    }
-  }
-}
-
 .modalCart {
-  position: absolute;
+  position: fixed;
   display: none;
+  align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
-  top: 12vh;
+  top: 0;
   right: 0;
   min-height: 100vh;
   width: 40rem;
-  gap: 1.6rem;
+  gap: 0 1.6rem;
   background-color: $white;
   z-index: 1;
   box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.10);
   overflow: hidden;
+  color: $white;
 
   .modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     height: 4vh;
     padding: 0.8rem;
     background-color: $primary;
+
+    .modalClose {
+      width: 20px;
+      height: auto;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
 
     h6 {
       text-align: center;
@@ -92,20 +41,11 @@
         font-weight: 600;
       }
     }
-
-    .closeButton {
-      all: unset;
-      display: flex;
-      align-items: top;
-      justify-content: center;
-      font-size: 1.2rem;
-      font-weight: 500;
-      cursor: pointer;
-    }
   }
 
   .modalBody {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -157,7 +97,7 @@
   @extend .modalCart;
   display: flex;
   width: 40rem;
-  animation: slide-in 0.4s ease-out forwards;
+  animation: slide-in 0.3s ease-out forwards;
 }
 
 @keyframes slide-in {
