@@ -1,14 +1,18 @@
 
-import tshirtImage from '@/presentation/assets/tshirt-780.png'
 import Styles from './product-styles.scss'
 import React from 'react'
+import Tshirt from '@/presentation/components/tshirt-color/tshirt-color'
+import TshirtLogo from '@/presentation/components/tshirt-logo/tshirt-logo'
 
 const Product: React.FC = () => {
   return (
     <>
       <section id='product' className={Styles.product}>
-        <div className={Styles.productImage}>
-          <img className={Styles.tshirtImage} src={tshirtImage} />
+        <div className={Styles.tshirtImage}>
+          <Tshirt tshirtColor='black'/>
+          <div className={Styles.tshirtLogo}>
+            <TshirtLogo logoName='diamond' fillColor='white'/>
+          </div>
         </div>
         <div className={Styles.productMenu}>
           <h1>Diamond T-shirt</h1>

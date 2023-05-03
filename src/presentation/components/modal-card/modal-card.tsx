@@ -1,11 +1,17 @@
-import tshirtImage from '@/presentation/assets/tshirt-100.png'
 import Styles from './modal-card-styles.scss'
 import React from 'react'
+import Tshirt from '../tshirt-color/tshirt-color'
+import TshirtLogo from '../tshirt-logo/tshirt-logo'
 
 const ModalCard: React.FC = () => {
   return (
     <div className={Styles.modalCard}>
-      <img src={tshirtImage} />
+      <div className={Styles.tshirtImage}>
+        <Tshirt tshirtColor='black'/>
+        <div className={Styles.tshirtLogo}>
+          <TshirtLogo logoName='diamond' fillColor='white'/>
+        </div>
+      </div>
       <div className={Styles.cardTitle}>
         <h6>Diamond T-shirt<span> (Black)</span> </h6>
         <div className={Styles.cardDetail}>

@@ -9,6 +9,23 @@
   gap: 0.8rem;
   color: $black;
 
+  .tshirtImage {
+    position: relative;
+    width: 100px;
+    height: auto;
+
+    .tshirtLogo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-47%, -70%);
+      width: 30px;
+      height: auto;
+    }
+  }
+
+
+
   .cardTitle {
     display: flex;
     flex-direction: column;
