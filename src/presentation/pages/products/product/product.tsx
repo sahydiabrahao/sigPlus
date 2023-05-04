@@ -3,13 +3,14 @@ import Styles from './product-styles.scss'
 import React from 'react'
 import Tshirt from '@/presentation/components/tshirt-color/tshirt-color'
 import TshirtLogo from '@/presentation/components/tshirt-logo/tshirt-logo'
-import { useAppSelector } from '@/presentation/hooks/hooks'
+import { useAppDispatch, useAppSelector } from '@/presentation/hooks/hooks'
+import { tshirtUpdateColor } from '@/presentation/redux/tshirt-slice'
 
 const Product: React.FC = () => {
+  const dispatch = useAppDispatch()
   const tshirtColor = useAppSelector(state => state.tshirt.tshirtInfo.tshirtColor)
   const logoName = useAppSelector(state => state.tshirt.tshirtInfo.logoName)
   const fillColor = useAppSelector(state => state.tshirt.tshirtInfo.fillColor)
-
   return (
     <>
       <section id='product' className={Styles.product}>
@@ -33,21 +34,21 @@ const Product: React.FC = () => {
             </div>
           </div>
           <div className={Styles.colorSquare}>
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
-              <button className={Styles.square} />
+              <button className={Styles.squareBlack} onClick={() => dispatch(tshirtUpdateColor('black')) }/>
+              <button className={Styles.squareWhite} onClick={() => dispatch(tshirtUpdateColor('white')) }/>
+              <button className={Styles.squareGray} onClick={() => dispatch(tshirtUpdateColor('gray')) }/>
+              <button className={Styles.squareGrayDark} onClick={() => dispatch(tshirtUpdateColor('grayDark')) }/>
+              <button className={Styles.squareBlueLight} onClick={() => dispatch(tshirtUpdateColor('blueLight')) }/>
+              <button className={Styles.squareBlueAqua} onClick={() => dispatch(tshirtUpdateColor('blueAqua')) }/>
+              <button className={Styles.squareBlueDark} onClick={() => dispatch(tshirtUpdateColor('blueDark')) }/>
+              <button className={Styles.squareRed} onClick={() => dispatch(tshirtUpdateColor('red')) }/>
+              <button className={Styles.squareYellow} onClick={() => dispatch(tshirtUpdateColor('yellow')) }/>
+              <button className={Styles.squareGreen} onClick={() => dispatch(tshirtUpdateColor('green')) }/>
+              <button className={Styles.squarePink} onClick={() => dispatch(tshirtUpdateColor('pink')) }/>
+              <button className={Styles.squareCoral} onClick={() => dispatch(tshirtUpdateColor('coral')) }/>
+              <button className={Styles.squarePurple} onClick={() => dispatch(tshirtUpdateColor('purple')) }/>
+              <button className={Styles.squareOrange} onClick={() => dispatch(tshirtUpdateColor('orange')) }/>
+              <button className={Styles.squareBrown} onClick={() => dispatch(tshirtUpdateColor('brown')) }/>
           </div>
           <div className={Styles.productSize} >
             <h5>Size</h5>

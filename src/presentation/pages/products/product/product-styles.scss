@@ -55,7 +55,6 @@
       justify-content: flex-end;
       width: 100%;
       border-bottom: solid 1px $gray;
-      ;
     }
 
     .productColor {
@@ -124,8 +123,90 @@
         all: unset;
         width: 3rem;
         height: 3rem;
-        background-color: $grayDark
+        cursor: pointer;
       }
+
+      .squareBlack {
+        @extend .square;
+        background-color: #272727
+      }
+
+      .squareWhite {
+        @extend .square;
+        background-color: #FFFFFF;
+        border: solid 1px $black;
+      }
+
+      .squareGray {
+        @extend .square;
+        background-color: #CFCDD3
+      }
+
+      .squareGrayDark {
+        @extend .square;
+        background-color: #626262
+      }
+
+      .squareBlueLight {
+        @extend .square;
+        background-color: #6AA6E2
+      }
+
+      .squareBlueAqua {
+        @extend .square;
+        background-color: #77D8ED
+      }
+
+      .squareBlueDark {
+        @extend .square;
+        background-color: #314195
+      }
+
+      .squareRed {
+        @extend .square;
+        background-color: #B20A29
+      }
+
+      .squareYellow {
+        @extend .square;
+        background-color: #D2F119
+      }
+
+      .squareGreen {
+        @extend .square;
+        background-color: #00A364
+      }
+
+      .squarePink {
+        @extend .square;
+        background-color: #FC91BA
+      }
+
+      .squareCoral {
+        @extend .square;
+        background-color: #FE7E83
+      }
+
+      .squarePurple {
+        @extend .square;
+        background-color: #604A9D
+      }
+
+      .squareOrange {
+        @extend .square;
+        background-color: #FE7F29
+      }
+
+      .squareBrown {
+        @extend .square;
+        background-color: #CFB69A
+      }
+
+
+
+
+
+
     }
 
     .productSize {

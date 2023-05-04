@@ -23,20 +23,20 @@ interface Props {
 const Tshirt = ({ tshirtColor }: Props): any => {
   const tshirtColors = [
     { color: 'black', value: tshirtBlack },
+    { color: 'white', value: tshirtWhite },
+    { color: 'gray', value: tshirtGray },
+    { color: 'grayDark', value: tshirtGrayDark },
+    { color: 'blueLight', value: tshirtBlueLight },
     { color: 'blueAqua', value: tshirtBlueAqua },
     { color: 'blueDark', value: tshirtBlueDark },
-    { color: 'blueLight', value: tshirtBlueLight },
-    { color: 'brown', value: tshirtBrown },
-    { color: 'coral', value: tshirtCoral },
-    { color: 'grayDark', value: tshirtGrayDark },
-    { color: 'gray', value: tshirtGray },
-    { color: 'green', value: tshirtGreen },
-    { color: 'orange', value: tshirtOrange },
-    { color: 'pink', value: tshirtPink },
-    { color: 'purple', value: tshirtPurple },
     { color: 'red', value: tshirtRed },
-    { color: 'white', value: tshirtWhite },
-    { color: 'yellow', value: tshirtYellow }
+    { color: 'yellow', value: tshirtYellow },
+    { color: 'green', value: tshirtGreen },
+    { color: 'pink', value: tshirtPink },
+    { color: 'coral', value: tshirtCoral },
+    { color: 'purple', value: tshirtPurple },
+    { color: 'orange', value: tshirtOrange },
+    { color: 'brown', value: tshirtBrown }
   ]
 
   const tshirt = (): any => {
