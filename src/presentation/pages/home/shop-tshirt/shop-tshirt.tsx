@@ -25,16 +25,6 @@ const ShopTshirt: React.FC = () => {
           <ShopCard tshirtColor="brown" logoName="letter" fillColor="white"/>
           <ShopCard tshirtColor="red" logoName="diamond" fillColor="black"/>
         </div>
-
-        <div className={Styles.shopPagination}>
-          <button>Back</button>
-          <div className={Styles.shopPage}>
-            <h6>1</h6>
-            <h6>2</h6>
-            <h6>3</h6>
-          </div>
-          <button>Next</button>
-        </div>
       </section>
     </>
   )

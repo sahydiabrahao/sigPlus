@@ -24,16 +24,6 @@ const ShopTint: React.FC = () => {
           <ShopCard tshirtColor="orange" logoName="diamond" fillColor="white"/>
           <ShopCard tshirtColor="brown" logoName="diamond" fillColor="white"/>
         </div>
-
-        <div className={Styles.shopPagination}>
-          <button>Back</button>
-          <div className={Styles.shopPage}>
-            <h6>1</h6>
-            <h6>2</h6>
-            <h6>3</h6>
-          </div>
-          <button>Next</button>
-        </div>
       </section>
     </>
   )
