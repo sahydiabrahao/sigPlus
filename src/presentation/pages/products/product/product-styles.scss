@@ -47,8 +47,6 @@
     height: 780px;
     padding: 16px;
 
-
-
     .productPrice {
       display: flex;
       align-items: center;
@@ -68,45 +66,72 @@
         gap: 16px;
         width: auto;
 
-
-        .radioButton {
+        .toogleButtonOn {
           all: unset;
-          position: relative;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          width: 90px;
+          cursor: pointer;
+          text-indent: -60px;
+          width: 60px;
           height: 32px;
+          background: $gray;
+          display: block;
+          border-radius: 100px;
+          position: relative;
           font-size: 1.4rem;
           font-weight: 400;
           cursor: pointer;
 
-          &::before {
-            content: '';
+          &::Before {
+            content: 'T-shirt';
             position: absolute;
-            top: 5px;
-            left: 0px;
-            width: 18px;
-            height: 18px;
-            border: solid 2px $black;
-            border-radius: 100%;
-            opacity: 0.8;
-            background-color: $white;
+            top: 2px;
+            right: 70px;
           }
 
           &::after {
             content: '';
             position: absolute;
-            top: 12px;
-            left: 7px;
-            width: 6px;
-            height: 6px;
-            border: solid 1px $gray;
-            border-radius: 100%;
-            opacity: 0.8;
-            background-color: $black;
+            top: 2px;
+            left: 2px;
+            width: 28px;
+            height: 28px;
+            background: $white;
+            border-radius: 90px;
+
+          }
+        }
+
+        .toogleButtonOff {
+          all: unset;
+          cursor: pointer;
+          text-indent: -60px;
+          width: 60px;
+          height: 32px;
+          background: $grayDark;
+          display: block;
+          border-radius: 100px;
+          position: relative;
+          font-size: 1.4rem;
+          font-weight: 400;
+          cursor: pointer;
+
+          &::Before {
+            content: 'Design';
+            position: absolute;
+            top: 2px;
+            right: 70px;
           }
 
+          &::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 28px;
+            height: 28px;
+            background: $gray;
+            border-radius: 90px;
+            transition: all 20s;
+          }
         }
       }
     }

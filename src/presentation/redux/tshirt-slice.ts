@@ -17,9 +17,12 @@ const tshirt = createSlice({
     },
     tshirtUpdateColor: (state, actions) => {
       state.tshirtInfo.tshirtColor = actions.payload
+    },
+    fillUpdateColor: (state, actions) => {
+      state.tshirtInfo.fillColor = actions.payload
     }
   }
 })
 
 export default tshirt.reducer
-export const { tshirtUpdateInfo, tshirtUpdateColor } = tshirt.actions
+export const { tshirtUpdateInfo, tshirtUpdateColor, fillUpdateColor } = tshirt.actions

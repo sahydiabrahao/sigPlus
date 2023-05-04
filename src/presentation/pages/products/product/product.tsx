@@ -1,16 +1,19 @@
 
 import Styles from './product-styles.scss'
-import React from 'react'
+import React, { useState } from 'react'
 import Tshirt from '@/presentation/components/tshirt-color/tshirt-color'
 import TshirtLogo from '@/presentation/components/tshirt-logo/tshirt-logo'
 import { useAppDispatch, useAppSelector } from '@/presentation/hooks/hooks'
-import { tshirtUpdateColor } from '@/presentation/redux/tshirt-slice'
+import { tshirtUpdateColor, fillUpdateColor } from '@/presentation/redux/tshirt-slice'
 
 const Product: React.FC = () => {
   const dispatch = useAppDispatch()
   const tshirtColor = useAppSelector(state => state.tshirt.tshirtInfo.tshirtColor)
   const logoName = useAppSelector(state => state.tshirt.tshirtInfo.logoName)
   const fillColor = useAppSelector(state => state.tshirt.tshirtInfo.fillColor)
+
+  const [toogleButton, setToogleButton] = useState(true)
+
   return (
     <>
       <section id='product' className={Styles.product}>
@@ -29,26 +32,25 @@ const Product: React.FC = () => {
           <div className={Styles.productColor}>
             <h5>Color</h5>
             <div className={Styles.colorToggle}>
-              <button className={Styles.radioButton}>T-shirt</button>
-              <button className={Styles.radioButton}>Design</button>
+              <button className={toogleButton ? Styles.toogleButtonOn : Styles.toogleButtonOff} onClick={() => { setToogleButton(!toogleButton) }}></button>
             </div>
           </div>
           <div className={Styles.colorSquare}>
-              <button className={Styles.squareBlack} onClick={() => dispatch(tshirtUpdateColor('black')) }/>
-              <button className={Styles.squareWhite} onClick={() => dispatch(tshirtUpdateColor('white')) }/>
-              <button className={Styles.squareGray} onClick={() => dispatch(tshirtUpdateColor('gray')) }/>
-              <button className={Styles.squareGrayDark} onClick={() => dispatch(tshirtUpdateColor('grayDark')) }/>
-              <button className={Styles.squareBlueLight} onClick={() => dispatch(tshirtUpdateColor('blueLight')) }/>
-              <button className={Styles.squareBlueAqua} onClick={() => dispatch(tshirtUpdateColor('blueAqua')) }/>
-              <button className={Styles.squareBlueDark} onClick={() => dispatch(tshirtUpdateColor('blueDark')) }/>
-              <button className={Styles.squareRed} onClick={() => dispatch(tshirtUpdateColor('red')) }/>
-              <button className={Styles.squareYellow} onClick={() => dispatch(tshirtUpdateColor('yellow')) }/>
-              <button className={Styles.squareGreen} onClick={() => dispatch(tshirtUpdateColor('green')) }/>
-              <button className={Styles.squarePink} onClick={() => dispatch(tshirtUpdateColor('pink')) }/>
-              <button className={Styles.squareCoral} onClick={() => dispatch(tshirtUpdateColor('coral')) }/>
-              <button className={Styles.squarePurple} onClick={() => dispatch(tshirtUpdateColor('purple')) }/>
-              <button className={Styles.squareOrange} onClick={() => dispatch(tshirtUpdateColor('orange')) }/>
-              <button className={Styles.squareBrown} onClick={() => dispatch(tshirtUpdateColor('brown')) }/>
+              <button className={Styles.squareBlack} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('black')) : () => dispatch(fillUpdateColor('black')) }/>
+              <button className={Styles.squareWhite} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('white')) : () => dispatch(fillUpdateColor('white')) }/>
+              <button className={Styles.squareGray} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('gray')) : () => dispatch(fillUpdateColor('#CFCDD3')) }/>
+              <button className={Styles.squareGrayDark} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('grayDark')) : () => dispatch(fillUpdateColor('#626262')) }/>
+              <button className={Styles.squareBlueLight} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('blueLight')) : () => dispatch(fillUpdateColor('#6AA6E2')) }/>
+              <button className={Styles.squareBlueAqua} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('blueAqua')) : () => dispatch(fillUpdateColor('#77D8ED')) }/>
+              <button className={Styles.squareBlueDark} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('blueDark')) : () => dispatch(fillUpdateColor('#314195')) }/>
+              <button className={Styles.squareRed} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('red')) : () => dispatch(fillUpdateColor('#B20A29')) }/>
+              <button className={Styles.squareYellow} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('yellow')) : () => dispatch(fillUpdateColor('#D2F119')) }/>
+              <button className={Styles.squareGreen} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('green')) : () => dispatch(fillUpdateColor('#00A364')) }/>
+              <button className={Styles.squarePink} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('pink')) : () => dispatch(fillUpdateColor('#FC91BA')) }/>
+              <button className={Styles.squareCoral} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('coral')) : () => dispatch(fillUpdateColor('#FE7E83')) }/>
+              <button className={Styles.squarePurple} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('purple')) : () => dispatch(fillUpdateColor('#604A9D')) }/>
+              <button className={Styles.squareOrange} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('orange')) : () => dispatch(fillUpdateColor('#FE7F29')) }/>
+              <button className={Styles.squareBrown} onClick={toogleButton ? () => dispatch(tshirtUpdateColor('brown')) : () => dispatch(fillUpdateColor('#CFB69A')) }/>
           </div>
           <div className={Styles.productSize} >
             <h5>Size</h5>
