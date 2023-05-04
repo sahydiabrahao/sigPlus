@@ -6,6 +6,7 @@ import React from 'react'
 import { useAppDispatch } from '@/presentation/hooks/hooks'
 import { upCounter } from '@/presentation/redux/cart-counter-slice'
 import { addItemToCart } from '@/presentation/redux/shopping-cart-slice'
+import { tshirtUpdateInfo } from '@/presentation/redux/tshirt-slice'
 
 interface Props {
   tshirtColor: string
@@ -19,12 +20,11 @@ const ShopCard = ({ tshirtColor, logoName, fillColor }: Props): any => {
   return (
     <div className={Styles.shopCard}>
     <div className={Styles.image}>
-      <div className={Styles.shopAddCart} onClick={() => dispatch(upCounter()) && dispatch(addItemToCart({ tshirtColor, logoName, fillColor }))}
-       >
+      <div className={Styles.shopAddCart} onClick={() => dispatch(upCounter()) && dispatch(addItemToCart({ tshirtColor, logoName, fillColor }))}>
         <FaCartPlus className={Styles.iconAddCart} />
         <p>Add</p>
       </div>
-      <a href='/products' >
+      <a href='/products' onClick={() => dispatch(tshirtUpdateInfo({ tshirtColor, logoName, fillColor }))}>
         <Tshirt tshirtColor={tshirtColor}/>
         <div className={Styles.tshirtLogo}>
           <TshirtLogo logoName={logoName} fillColor={fillColor}/>

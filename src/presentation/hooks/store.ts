@@ -2,8 +2,9 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import storage from 'redux-persist/lib/storage'
 import { persistReducer, persistStore } from 'redux-persist'
 import thunk from 'redux-thunk'
-import cartCounterSlice from '@/presentation/redux/cart-counter-slice'
+import tshirtReducer from '@/presentation/redux/tshirt-slice'
 import shoppingCartReducer from '@/presentation/redux/shopping-cart-slice'
+import cartCounterSlice from '@/presentation/redux/cart-counter-slice'
 import modalReducer from '@/presentation/redux/modal-slice'
 
 const persistConfig = {
@@ -12,6 +13,7 @@ const persistConfig = {
 }
 
 const rootReducer = combineReducers({
+  tshirt: tshirtReducer,
   shoppingCart: shoppingCartReducer,
   cartCounter: cartCounterSlice,
   modal: modalReducer
