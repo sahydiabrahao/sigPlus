@@ -1,6 +1,6 @@
 @import '@/presentation/styles/main.scss';
 
-.shop {
+.shopTshirt {
   @include padding();
 
   display: flex;
@@ -12,28 +12,12 @@
   width: 100vw;
   color: $black;
 
-  .shopMenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 30rem;
-    padding: 1.6rem 0;
-
-
-    a {
-      all: unset;
-      cursor: pointer;
-    }
-
-    h5 {
-      font-weight: 400;
-      cursor: pointer;
-    }
-  }
-
   .shopItems {
     display: flex;
+    padding: 3.2rem 0;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     a {
       color: unset;

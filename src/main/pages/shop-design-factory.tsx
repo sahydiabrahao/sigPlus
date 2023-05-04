@@ -2,15 +2,15 @@
 import Footer from '@/presentation/layout/footer/footer'
 import Header from '@/presentation/layout/header/header'
 import Hero from '@/presentation/pages/home/hero/hero'
-import ShopTshirt from '@/presentation/pages/home/shop-tshirt/shop-tshirt'
+import ShopDesign from '@/presentation/pages/home/shop-design/shop-design'
 import React from 'react'
 
-export const MakeHome: React.FC = () => {
+export const MakeShopDesign: React.FC = () => {
   return (
     <>
       <Header />
       <Hero />
-      <ShopTshirt />
+      <ShopDesign />
       <Footer />
     </>
   )

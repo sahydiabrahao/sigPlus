@@ -19,8 +19,8 @@ const Header: React.FC = () => {
         </a>
         <div className={Styles.menu}>
           <a href="/"><h5>T-shirt</h5></a>
-          <a href="#"><h5>Design</h5></a>
-          <a href="#"><h5>Tint</h5></a>
+          <a href="/design"><h5>Design</h5></a>
+          <a href="/tint"><h5>Tint</h5></a>
         </div>
         <a className={Styles.menuIcon} onClick={() => dispatch(showModal())}>
           <FaShoppingCart className={Styles.cartIcon}/>
