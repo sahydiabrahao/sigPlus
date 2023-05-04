@@ -3,15 +3,20 @@ import Styles from './product-styles.scss'
 import React from 'react'
 import Tshirt from '@/presentation/components/tshirt-color/tshirt-color'
 import TshirtLogo from '@/presentation/components/tshirt-logo/tshirt-logo'
+import { useAppSelector } from '@/presentation/hooks/hooks'
 
 const Product: React.FC = () => {
+  const tshirtColor = useAppSelector(state => state.tshirt.tshirtInfo.tshirtColor)
+  const logoName = useAppSelector(state => state.tshirt.tshirtInfo.logoName)
+  const fillColor = useAppSelector(state => state.tshirt.tshirtInfo.fillColor)
+
   return (
     <>
       <section id='product' className={Styles.product}>
         <div className={Styles.tshirtImage}>
-          <Tshirt tshirtColor='black'/>
+          <Tshirt tshirtColor={tshirtColor}/>
           <div className={Styles.tshirtLogo}>
-            <TshirtLogo logoName='diamond' fillColor='white'/>
+            <TshirtLogo logoName={logoName} fillColor={fillColor}/>
           </div>
         </div>
         <div className={Styles.productMenu}>
