@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     <>
       <section id='hero' className={Styles.hero}>
         <h2 id='hero' className={Styles.title}>
-          <span>Spot</span> your style with our <span>t-shirts!</span>
+          <span>Spot</span> your style with our <span>T-Shirts</span>
         </h2>
         <img className={Styles.heroImage} src={heroImage} />
       </section>
