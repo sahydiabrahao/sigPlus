@@ -6,7 +6,7 @@ import { showModal } from '@/presentation/redux/modal-slice'
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch()
-  const numOfCartItems = useAppSelector(state => state.shoppingCart.numOfCartItems)
+  const numOfCartItems = useAppSelector(state => state.cartCounter.numOfCartItems)
 
   return (
     <>

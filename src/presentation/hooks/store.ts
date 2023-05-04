@@ -2,6 +2,7 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import storage from 'redux-persist/lib/storage'
 import { persistReducer, persistStore } from 'redux-persist'
 import thunk from 'redux-thunk'
+import cartCounterSlice from '@/presentation/redux/cart-counter-slice'
 import shoppingCartReducer from '@/presentation/redux/shopping-cart-slice'
 import modalReducer from '@/presentation/redux/modal-slice'
 
@@ -12,6 +13,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   shoppingCart: shoppingCartReducer,
+  cartCounter: cartCounterSlice,
   modal: modalReducer
 })
 
@@ -23,7 +25,7 @@ export const store = configureStore({
 })
 
 const persistor = persistStore(store)
-
+console.log(persistor)
 export default persistor
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>

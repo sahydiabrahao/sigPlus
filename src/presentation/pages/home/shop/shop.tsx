@@ -15,7 +15,7 @@ const Shop: React.FC = () => {
 
         <div className={Styles.shopItems}>
           <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="purple" logoName="triangle" fillColor="white"/>
           <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
           <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
           <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
