@@ -1,54 +1,74 @@
 @import '@/presentation/styles/main.scss';
 
 .modalCard {
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
   width: 100%;
   height: auto;
-  gap: 0.8rem;
   color: $black;
 
-  .tshirtImage {
-    position: relative;
-    width: 100px;
-    height: auto;
-
-    .tshirtLogo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-47%, -70%);
-      width: 30px;
-      height: auto;
-    }
-  }
-
-  .cardTitle {
+  .modalitems {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: flex-start;
     width: 100%;
+    height: auto;
+    gap: 0.8rem;
+    color: $black;
+    border-bottom: 1px solid $grayLight;
 
-    h6 {
-      font-weight: 400;
+    .tshirtImage {
+      position: relative;
+      width: 100px;
+      height: auto;
 
-      span {
-        opacity: 0.5;
+      .tshirtLogo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-47%, -70%);
+        width: 30px;
+        height: auto;
       }
     }
-  }
 
-  .cardDetail {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    .cardTitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
 
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-    h6 {
-      font-weight: 300;
+        .removeItem {
+          width: 14px;
+          height: auto;
+          transform: rotate(45deg);
+          color: $grayDark;
+          cursor: pointer;
+        }
+      }
+
+      h6 {
+        font-weight: 400;
+
+        span {
+          opacity: 0.5;
+        }
+      }
     }
+
+    .cardDetail {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+
+      h6 {
+        font-weight: 300;
+      }
+    }
+
   }
-
-
 }

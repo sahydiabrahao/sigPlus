@@ -7,8 +7,8 @@ import { showModal } from '@/presentation/redux/modal-slice'
 
 const ModalCart: React.FC = () => {
   const dispatch = useAppDispatch()
-
   const modalIsVisible = useAppSelector(state => state.modal.modalIsVisible)
+
   return (
     <>
       <section id='modalCart' className={modalIsVisible ? Styles.modalCartShow : Styles.modalCart}>
@@ -18,7 +18,6 @@ const ModalCart: React.FC = () => {
           <div className={Styles.modalBody}>
             <h5> Cart </h5>
 
-            <ModalCard />
             <ModalCard />
 
             <div className={Styles.modalTotal}>

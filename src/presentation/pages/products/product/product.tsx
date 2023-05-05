@@ -6,7 +6,7 @@ import TshirtLogo from '@/presentation/components/tshirt-logo/tshirt-logo'
 import { useAppDispatch, useAppSelector } from '@/presentation/hooks/hooks'
 import { tshirtUpdateColor, fillUpdateColor } from '@/presentation/redux/tshirt-slice'
 import { upCounter } from '@/presentation/redux/cart-counter-slice'
-import { addItemToCart } from '@/presentation/redux/shopping-cart-slice'
+import { addCartItem } from '@/presentation/redux/shopping-cart-slice'
 
 const Product: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -72,7 +72,7 @@ const Product: React.FC = () => {
             </div>
           </div>
 
-          <button className={Styles.addCartButton} onClick={() => dispatch(upCounter()) && dispatch(addItemToCart({ tshirtColor, logoName, fillColor }))}>
+          <button className={Styles.addCartButton} onClick={() => dispatch(upCounter()) && dispatch(addCartItem({ tshirtColor, logoName, fillColor }))}>
             Add To Cart
           </button>
 

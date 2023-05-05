@@ -5,7 +5,7 @@ import Styles from './shop-card-styles.scss'
 import React from 'react'
 import { useAppDispatch } from '@/presentation/hooks/hooks'
 import { upCounter } from '@/presentation/redux/cart-counter-slice'
-import { addItemToCart } from '@/presentation/redux/shopping-cart-slice'
+import { addCartItem } from '@/presentation/redux/shopping-cart-slice'
 import { tshirtUpdateInfo } from '@/presentation/redux/tshirt-slice'
 
 interface Props {
@@ -20,7 +20,7 @@ const ShopCard = ({ tshirtColor, logoName, fillColor }: Props): any => {
   return (
     <div className={Styles.shopCard}>
       <div className={Styles.image}>
-        <div className={Styles.shopAddCart} onClick={() => dispatch(upCounter()) && dispatch(addItemToCart({ tshirtColor, logoName, fillColor }))}>
+        <div className={Styles.shopAddCart} onClick={() => dispatch(upCounter()) && dispatch(addCartItem({ tshirtColor, logoName, fillColor }))}>
           <FaCartPlus className={Styles.iconAddCart} />
           <p>Add</p>
         </div>
