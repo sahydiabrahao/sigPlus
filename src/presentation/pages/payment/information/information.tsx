@@ -47,7 +47,7 @@ const Information: React.FC = () => {
                 <label htmlFor="">Zip Code</label>
                 <input type="text" />
               </div>
-              <a className={Styles.siginButton}>Next</a>
+              <a href="/payment-confirmation" className={Styles.nextButton}>Next</a>
             </form>
           </div>
         </div>

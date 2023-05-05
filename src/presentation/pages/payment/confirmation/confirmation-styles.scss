@@ -1,6 +1,6 @@
 @import '@/presentation/styles/main.scss';
 
-.information {
+.confirmation {
   @include padding();
 
   display: flex;
@@ -13,13 +13,13 @@
   padding-bottom: 3.2rem;
   color: $primary;
 
-  .informationPayment {
+  .confirmationPayment {
     display: flex;
     flex-direction: column;
     width: 50%;
     gap: 3.2rem;
 
-    .informationStep {
+    .confirmationStep {
       position: relative;
       display: flex;
       align-items: center;
@@ -38,7 +38,8 @@
 
       }
 
-      .stepOne {
+      .stepOne,
+      .stepTwo {
         @extend .step;
 
         .checkIcon {
@@ -47,14 +48,11 @@
         }
       }
 
-      .stepTwo {
+      .stepThree {
         @extend .step;
       }
 
-      .stepThree {
-        @extend .step;
-        background-color: $gray;
-      }
+
 
       .stepLine {
         width: 7rem;
@@ -66,7 +64,7 @@
       }
     }
 
-    .informationForm {
+    .confirmationForm {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -113,8 +111,18 @@
           }
         }
 
-        .nextButton {
-          all: unset;
+        .totalPrice {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          h1 {
+            font-weight: 500;
+          }
+        }
+
+        .siginButton {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -134,11 +142,23 @@
           }
 
         }
+
+        .sigupButton {
+          font-size: 1.4rem;
+          text-align: end;
+          font-weight: 400;
+          color: $grayDark;
+          cursor: pointer;
+
+          &:hover {
+            font-weight: 500;
+          }
+        }
       }
     }
   }
 
-  .informationImage {
+  .confirmationImage {
     width: 600px;
     height: auto;
     animation: slide-in-left 1.4s forwards ease-out;
