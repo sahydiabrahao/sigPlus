@@ -28,7 +28,7 @@ const ModalCart: React.FC = () => {
                 </h6>
               </div>
             </div>
-            <a href='/payment-account' className={Styles.checkoutButton}>Checkout</a>
+            <a href='/payment-account' onClick={() => dispatch(showModal())} className={Styles.checkoutButton}>Checkout</a>
           </div>
       </section>
     </>

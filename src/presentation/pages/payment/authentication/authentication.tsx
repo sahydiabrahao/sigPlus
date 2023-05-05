@@ -1,15 +1,16 @@
 
-import Styles from './account-styles.scss'
+import paymentImage from '@/presentation/assets/payment.png'
+import Styles from './authentication-styles.scss'
 import React from 'react'
 
-const Account: React.FC = () => {
+const Authentication: React.FC = () => {
   return (
     <>
-      <section id='account' className={Styles.account}>
-        <div className={Styles.accountPayment}>
+      <section id='authentication' className={Styles.authentication}>
+        <div className={Styles.authenticationPayment}>
           <h1>Payment</h1>
 
-          <div className={Styles.accountStep}>
+          <div className={Styles.authenticationStep}>
             <div className={Styles.stepOne}>
               <h3>1</h3>
             </div>
@@ -21,7 +22,7 @@ const Account: React.FC = () => {
             </div>
           </div>
 
-          <div className={Styles.accountForm}>
+          <div className={Styles.authenticationForm}>
             <form>
               <div className={Styles.formInput}>
                 <label htmlFor="">Email</label>
@@ -39,11 +40,11 @@ const Account: React.FC = () => {
               </div>
             </form>
           </div>
-
         </div>
+          <img className={Styles.paymentImage} src={paymentImage} />
       </section>
     </>
   )
 }
 
-export default Account
+export default Authentication

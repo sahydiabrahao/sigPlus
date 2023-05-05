@@ -1,15 +1,14 @@
 
 import Footer from '@/presentation/layout/footer/footer'
 import Header from '@/presentation/layout/header/header'
-import Account from '@/presentation/pages/payment/account/account'
-import Product from '@/presentation/pages/products/product/product'
+import Authentication from '@/presentation/pages/payment/authentication/authentication'
 import React from 'react'
 
-export const MakePaymentAccount: React.FC = () => {
+export const MakePaymentAuthentication: React.FC = () => {
   return (
     <>
       <Header />
-      <Account/>
+      <Authentication/>
       <Footer />
     </>
   )

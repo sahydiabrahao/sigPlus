@@ -1,23 +1,25 @@
 @import '@/presentation/styles/main.scss';
 
-.account {
+.authentication {
   @include padding();
 
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
-  height: 100vh;
+  justify-content: center;
+  gap: 3.2rem;
+  height: auto;
   width: 100vw;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
   color: $primary;
 
-  .accountPayment {
+  .authenticationPayment {
     display: flex;
     flex-direction: column;
     width: 50%;
     gap: 3.2rem;
 
-    .accountStep {
+    .authenticationStep {
       position: relative;
       display: flex;
       align-items: center;
@@ -71,7 +73,7 @@
 
     }
 
-    .accountForm {
+    .authenticationForm {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -151,6 +153,23 @@
           }
         }
       }
+    }
+  }
+
+  .paymentImage {
+    width: 100%;
+    height: auto;
+    animation: slide-in-left 1.4s forwards ease-out;
+  }
+
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(150%);
+    }
+
+    100% {
+      transform: translateX(0%);
     }
   }
 }
