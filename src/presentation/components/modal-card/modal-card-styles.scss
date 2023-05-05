@@ -24,8 +24,6 @@
     }
   }
 
-
-
   .cardTitle {
     display: flex;
     flex-direction: column;
@@ -44,30 +42,13 @@
   .cardDetail {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    .cardQauntity {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 10rem;
-
-      button {
-        all: unset;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        font-size: 2.4rem;
-        font-weight: 300;
-        cursor: pointer;
-      }
-    }
+    justify-content: flex-end;
 
 
     h6 {
       font-weight: 300;
     }
   }
+
+
 }

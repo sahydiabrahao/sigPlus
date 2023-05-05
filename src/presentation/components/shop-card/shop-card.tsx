@@ -19,23 +19,23 @@ const ShopCard = ({ tshirtColor, logoName, fillColor }: Props): any => {
 
   return (
     <div className={Styles.shopCard}>
-    <div className={Styles.image}>
-      <div className={Styles.shopAddCart} onClick={() => dispatch(upCounter()) && dispatch(addItemToCart({ tshirtColor, logoName, fillColor }))}>
-        <FaCartPlus className={Styles.iconAddCart} />
-        <p>Add</p>
-      </div>
-      <a href='/products' onClick={() => dispatch(tshirtUpdateInfo({ tshirtColor, logoName, fillColor }))}>
-        <Tshirt tshirtColor={tshirtColor}/>
-        <div className={Styles.tshirtLogo}>
-          <TshirtLogo logoName={logoName} fillColor={fillColor}/>
+      <div className={Styles.image}>
+        <div className={Styles.shopAddCart} onClick={() => dispatch(upCounter()) && dispatch(addItemToCart({ tshirtColor, logoName, fillColor }))}>
+          <FaCartPlus className={Styles.iconAddCart} />
+          <p>Add</p>
         </div>
-      </a>
+        <a href='/products' onClick={() => dispatch(tshirtUpdateInfo({ tshirtColor, logoName, fillColor }))}>
+          <Tshirt tshirtColor={tshirtColor}/>
+          <div className={Styles.tshirtLogo}>
+            <TshirtLogo logoName={logoName} fillColor={fillColor}/>
+          </div>
+        </a>
+      </div>
+      <div className={Styles.shopLabel}>
+        <h6>{logoName} T-shirt<span> ({tshirtColor})</span> </h6>
+        <h6>$ 49.99</h6>
+      </div>
     </div>
-    <div className={Styles.shopLabel}>
-      <h6>T-shirt<span> (Black)</span> </h6>
-      <h6>$ 49.99</h6>
-    </div>
-  </div>
   )
 }
 

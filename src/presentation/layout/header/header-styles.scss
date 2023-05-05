@@ -74,6 +74,11 @@
       fill: $white;
       width: 2.8rem;
       height: auto;
+      transition: all 0.3s;
+
+      &:hover {
+        fill: $primary;
+      }
     }
 
     span {
@@ -87,8 +92,9 @@
       font-size: 1.2rem;
       width: 21px;
       height: auto;
-      background-color: $primaryDark;
+      background-color: $primary;
       border-radius: 50%;
     }
+
   }
 }

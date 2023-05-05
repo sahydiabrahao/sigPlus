@@ -8,21 +8,21 @@ const ShopTint: React.FC = () => {
     <>
       <section id='shop' className={Styles.shopTint}>
         <div className={Styles.shopItems}>
-          <ShopCard tshirtColor="black" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="white" logoName="diamond" fillColor="black"/>
-          <ShopCard tshirtColor="gray" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="grayDark" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="blueLight" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="blueAqua" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="blueDark" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="red" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="yellow" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="green" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="pink" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="coral" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="purple" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="orange" logoName="diamond" fillColor="white"/>
-          <ShopCard tshirtColor="brown" logoName="diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Black" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="White" logoName="Diamond" fillColor="black"/>
+          <ShopCard tshirtColor="Gray" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Gray Dark" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Blue Light" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Blue Aqua" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Blue Dark" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Red" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Yellow" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Green" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Pink" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Coral" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Purple" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Orange" logoName="Diamond" fillColor="white"/>
+          <ShopCard tshirtColor="Brown" logoName="Diamond" fillColor="white"/>
         </div>
       </section>
     </>

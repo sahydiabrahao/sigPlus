@@ -8,14 +8,14 @@ const ShopDesign: React.FC = () => {
     <>
       <section id='shop' className={Styles.shopDesign}>
         <div className={Styles.shopItems}>
-          <ShopCard tshirtColor="white" logoName="diamond" fillColor="black"/>
-          <ShopCard tshirtColor="white" logoName="borderOutline" fillColor="black"/>
-          <ShopCard tshirtColor="white" logoName="circle" fillColor="black"/>
-          <ShopCard tshirtColor="white" logoName="diamondDouble" fillColor="black"/>
-          <ShopCard tshirtColor="white" logoName="ice" fillColor="black"/>
-          <ShopCard tshirtColor="white" logoName="letter" fillColor="black"/>
-          <ShopCard tshirtColor="white" logoName="retangle" fillColor="black"/>
-          <ShopCard tshirtColor="white" logoName="triangle" fillColor="black"/>
+          <ShopCard tshirtColor="White" logoName="Diamond" fillColor="black"/>
+          <ShopCard tshirtColor="White" logoName="Simple" fillColor="black"/>
+          <ShopCard tshirtColor="White" logoName="Spiral" fillColor="black"/>
+          <ShopCard tshirtColor="White" logoName="Spiral D." fillColor="black"/>
+          <ShopCard tshirtColor="White" logoName="Ice" fillColor="black"/>
+          <ShopCard tshirtColor="White" logoName="TTS" fillColor="black"/>
+          <ShopCard tshirtColor="White" logoName="Ice R." fillColor="black"/>
+          <ShopCard tshirtColor="White" logoName="Ice T." fillColor="black"/>
         </div>
       </section>
     </>
