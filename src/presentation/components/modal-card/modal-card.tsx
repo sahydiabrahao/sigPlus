@@ -5,6 +5,7 @@ import TshirtLogo from '../tshirt-logo/tshirt-logo'
 import { useAppDispatch, useAppSelector } from '@/presentation/hooks/hooks'
 import { FaPlus } from 'react-icons/fa'
 import { removeItemFromCart } from '@/presentation/redux/shopping-cart-slice'
+import { downCounter } from '@/presentation/redux/cart-counter-slice'
 
 const ModalCard: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -24,10 +25,10 @@ const ModalCard: React.FC = () => {
             <div className={Styles.cardTitle}>
               <div className={Styles.title}>
                <h6>{logoName} T-shirt<span> ({tshirtColor})</span></h6>
-               <FaPlus className={Styles.removeItem} onClick={() => { dispatch(removeItemFromCart(id)) }}/>
+               <FaPlus className={Styles.removeItem} onClick={() => { dispatch(removeItemFromCart(id)) && dispatch(downCounter()) }}/>
               </div>
               <div className={Styles.cardDetail}>
-                <h6>49.99--{id}</h6>
+                <h6>49.99</h6>
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ import { showModal } from '@/presentation/redux/modal-slice'
 const ModalCart: React.FC = () => {
   const dispatch = useAppDispatch()
   const modalIsVisible = useAppSelector(state => state.modal.modalIsVisible)
-
+  const totalPrice = (49.99 * useAppSelector(state => state.cartCounter.numOfCartItems)).toFixed(2)
   return (
     <>
       <section id='modalCart' className={modalIsVisible ? Styles.modalCartShow : Styles.modalCart}>
@@ -24,7 +24,7 @@ const ModalCart: React.FC = () => {
               <h6> Total </h6>
               <div>
                 <h6>
-                  $ 149.97
+                  $ {totalPrice}
                 </h6>
               </div>
             </div>
