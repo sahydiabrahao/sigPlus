@@ -14,8 +14,14 @@ const Authentication: React.FC = () => {
             <div className={Styles.stepOne}>
               <h3>1</h3>
             </div>
+            <div className={Styles.stepLine}>
+
+            </div>
             <div className={Styles.stepTwo}>
               <h3>2</h3>
+            </div>
+            <div className={Styles.stepLine}>
+
             </div>
             <div className={Styles.stepThree}>
               <h3>3</h3>
@@ -32,12 +38,7 @@ const Authentication: React.FC = () => {
                 <label htmlFor="">Password</label>
                 <input type="text" />
               </div>
-
-              <a className={Styles.siginButton}>Sign In</a>
-              <div>
-
-                <a className={Styles.sigupButton}>Register</a>
-              </div>
+              <a href='/payment-information' className={Styles.siginButton}>Sign In</a>
             </form>
           </div>
         </div>
