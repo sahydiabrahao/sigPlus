@@ -6,7 +6,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 3.2rem;
+  gap: 10rem;
   height: auto;
   width: 100vw;
   padding-top: 3.2rem;
@@ -132,7 +132,6 @@
 
         .sigupButton {
           font-size: 1.4rem;
-          text-align: end;
           font-weight: 400;
           color: $grayDark;
           cursor: pointer;
@@ -146,7 +145,7 @@
   }
 
   .paymentImage {
-    width: 700px;
+    width: 70%;
     height: auto;
     animation: slide-in-left 1.4s forwards ease-out;
   }
