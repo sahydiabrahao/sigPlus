@@ -57,7 +57,7 @@ const Confirmation: React.FC = () => {
                   <h1 >{totalPrice}</h1>
                 </div>
               </div>
-              <a className={Styles.siginButton}>Confirm</a>
+              <a href="/" className={Styles.siginButton}>Confirm</a>
             </form>
           </div>
         </div>
