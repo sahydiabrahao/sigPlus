@@ -23,6 +23,10 @@
     width: 30rem;
 
     a {
+      @include responsive(phone) {
+        display: none;
+      }
+
       all: unset;
       position: relative;
       display: flex;
@@ -68,8 +72,13 @@
     width: 12rem;
     height: auto;
     cursor: pointer;
+    margin-right: 10px;
 
     .cartIcon {
+      @include responsive(phone) {
+        display: none;
+      }
+
       position: relative;
       fill: $white;
       width: 2.8rem;
@@ -79,9 +88,15 @@
       &:hover {
         fill: $primary;
       }
+
+
     }
 
     span {
+      @include responsive(phone) {
+        display: none;
+      }
+
       position: absolute;
       top: -5px;
       right: -10px;
@@ -96,5 +111,33 @@
       border-radius: 50%;
     }
 
+  }
+
+  .menuHamburguerIcon {
+    @include responsive(phone) {
+      display: flex;
+    }
+
+    position: relative;
+    display: none;
+    justify-content: flex-end;
+    width: 12rem;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+
+    .hamburguerIcon {
+      @include responsive(phone) {
+        display: flex;
+      }
+
+      display: none;
+      position: relative;
+      fill: $white;
+      width: 3.2rem;
+      height: auto;
+      transition: all 0.3s;
+      margin-right: 10px;
+    }
   }
 }

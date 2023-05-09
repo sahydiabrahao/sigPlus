@@ -1,6 +1,6 @@
 import Styles from './header-styles.scss'
 import React from 'react'
-import { FaShoppingCart } from 'react-icons/fa'
+import { FaBars, FaShoppingCart } from 'react-icons/fa'
 import { useAppDispatch, useAppSelector } from '@/presentation/hooks/hooks'
 import { showModal } from '@/presentation/redux/modal-slice'
 
@@ -28,6 +28,9 @@ const Header: React.FC = () => {
         <a className={Styles.menuIcon} onClick={() => dispatch(showModal())}>
           <FaShoppingCart className={Styles.cartIcon}/>
           {numOfCartItems === 0 ? null : <span>{numOfCartItems}</span>}
+        </a>
+        <a className={Styles.menuHamburguerIcon} onClick={() => dispatch(showModal())}>
+          <FaBars className={Styles.hamburguerIcon}/>
         </a>
       </section>
     </>
