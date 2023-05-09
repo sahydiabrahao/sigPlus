@@ -9,8 +9,9 @@ The Tshirt Spot website is a platform for our online clothing store that special
 - React Redux state management library that seamlessly integrates Redux with React components, simplifying the management and synchronization of state across the application.
 
 ### Design
-E-Tech Nexus design was created using Figma, a popular design tool for creating digital products. The design features a modern and minimalist aesthetic, with a focus on clean lines and white space.
-- <a href="https://www.figma.com/file/vs3P55GsKOJCyd241ULpbC/e-tech-nexus?node-id=601-243">E-Tech Nexus-Figma</a>
+The Tshirt Spot design was created using Figma, a popular design tool for creating digital products. The design features a modern and minimalist aesthetic, with a focus on clean lines and white space.
+- <a href="https://www.figma.com/file/8h4H2TGjewwz4mL1fKg9yy/the-shirt-spot?type=design&node-id=601%3A243&t=kg1xI9JDHuajww6p-1" >The Tshirt Spot-Figma</a>
+
 - Press "Ctrl + Scroll" to ZoomIn and ZoomOut.
 - Keep Press "Space" to move.
 ### Technologies Used
