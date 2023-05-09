@@ -1,12 +1,42 @@
 import Styles from './header-styles.scss'
-import React from 'react'
-import { FaBars, FaShoppingCart } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaBars, FaPlus, FaShoppingCart } from 'react-icons/fa'
 import { useAppDispatch, useAppSelector } from '@/presentation/hooks/hooks'
 import { showModal } from '@/presentation/redux/modal-slice'
 
 const Header: React.FC = () => {
   const dispatch = useAppDispatch()
   const numOfCartItems = useAppSelector(state => state.cartCounter.numOfCartItems)
+
+  const [showMenuPhone, setShowMenuPhone] = useState(false)
+
+  const onMenuPhone = (): any => {
+    setShowMenuPhone(true)
+    document.body.style.position = 'fixed'
+  }
+
+  const onCloseMenuPhone = (): any => {
+    setShowMenuPhone(false)
+    document.body.style.position = ''
+  }
+
+  const shoppingCartMobile = (): any => {
+    setShowMenuPhone(false)
+    document.body.style.position = ''
+    dispatch(showModal())
+  }
+
+  const MenuPhone = (): any => {
+    return (
+    <div className={Styles.menuPhone} >
+    <a href="#header" onClick={shoppingCartMobile}>Cart</a>
+    <a href="/" onClick={onCloseMenuPhone}>T-shirt</a>
+    <a href="/design" onClick={onCloseMenuPhone}>Design</a>
+    <a href="/tint" onClick={onCloseMenuPhone}>Tint</a>
+
+    <FaPlus className={Styles.closeIcon} onClick={onCloseMenuPhone} />
+  </div>)
+  }
 
   return (
     <>
@@ -29,9 +59,10 @@ const Header: React.FC = () => {
           <FaShoppingCart className={Styles.cartIcon}/>
           {numOfCartItems === 0 ? null : <span>{numOfCartItems}</span>}
         </a>
-        <a className={Styles.menuHamburguerIcon} onClick={() => dispatch(showModal())}>
+        <a className={Styles.menuHamburguerIcon} onClick={onMenuPhone}>
           <FaBars className={Styles.hamburguerIcon}/>
         </a>
+        { showMenuPhone ? <MenuPhone /> : null }
       </section>
     </>
   )
