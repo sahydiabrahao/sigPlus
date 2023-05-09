@@ -80,8 +80,6 @@ const Product: React.FC = () => {
             <h5>Detail</h5>
               <p>
                 Our t-shirts are made from premium fabrics, carefully selected for their softness, durability, and comfort.
-                We use a variety of cotton blends to create the perfect balance of breathability and stretch, so that our
-                t-shirts feel great against the skin and retain their shape even after multiple washes.
               </p>
           </div>
         </div>

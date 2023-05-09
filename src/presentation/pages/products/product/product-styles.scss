@@ -3,12 +3,18 @@
 .product {
   @include padding();
 
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   color: $black;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
 
   h1,
   h5,
@@ -20,18 +26,19 @@
   .tshirtImage {
     position: relative;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-items: center;
     width: 100%;
-    height: 780px;
-    padding: 44px 0;
+    height: 100%;
 
     .tshirtLogo {
+
+
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-47%, -95%);
-      width: 200px;
+      transform: translate(-47%, -75%);
+      width: 40%;
       height: auto;
 
     }
@@ -44,7 +51,7 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
-    height: 780px;
+    height: auto;
     padding: 16px;
 
     .productPrice {

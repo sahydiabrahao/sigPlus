@@ -3,28 +3,43 @@
 .confirmation {
   @include padding();
 
+  @include responsive(phone) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  gap: 10rem;
+  justify-content: space-between;
   height: auto;
   width: 100vw;
-  padding-top: 3.2rem;
-  padding-bottom: 3.2rem;
   color: $primary;
 
   .confirmationPayment {
+    @include responsive(phone) {
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    gap: 2.2rem;
+    gap: 1.6rem;
 
     .confirmationStep {
       position: relative;
       display: flex;
+      width: 100%;
+      gap: 3.2rem;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
 
       .step {
         display: flex;
@@ -71,6 +86,10 @@
       justify-content: center;
       width: 100%;
 
+
+
+
+
       form {
         display: flex;
         flex-direction: column;
@@ -78,10 +97,15 @@
         justify-content: flex-start;
         gap: 0.8rem;
 
+
+
+
         .formInput {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+
+
 
           label {
             font-size: 1.2rem;
@@ -134,7 +158,7 @@
           background-color: $primary;
           color: $white;
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
-          margin-top: 2rem;
+          margin-top: 0.8rem;
           cursor: pointer;
 
           &:hover {
@@ -159,7 +183,13 @@
   }
 
   .confirmationImage {
-    width: 70%;
+    @include responsive(phone) {
+      width: 100%;
+    }
+
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    width: 45%;
     height: auto;
     animation: slide-in-left 1.4s forwards ease-out;
   }
