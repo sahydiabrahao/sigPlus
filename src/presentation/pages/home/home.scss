@@ -1,6 +1,6 @@
 @import '@/presentation/styles/main.scss';
 
-.shopTint {
+.home {
   @include padding();
 
   @include responsive(phone) {
@@ -12,21 +12,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
+  min-height: 85vh;
   height: auto;
   width: 100vw;
   color: $black;
 
-  .shopItems {
-    display: flex;
-    padding: 3.2rem 0;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-
-    a {
-      color: unset;
-      text-decoration: unset;
-    }
+  h5 {
+    font-weight: 500;
+    color: $black;
   }
 }

@@ -3,76 +3,16 @@
 .footer {
   @include padding();
 
-  @include responsive (phone) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: auto;
-    gap: 16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 30vh;
+  justify-content: center;
+  height: 5vh;
   width: 100vw;
-  background-color: $black;
+  background-color: $primaryDark;
+  color: $white;
 
-  .footerAbout,
-  .footerContact,
-  .footerConnect {
-    @include responsive (phone) {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    a {
-      all: unset;
-      cursor: pointer;
-    }
-
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    max-height: 130px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 4px;
-    color: $white;
-
-    h5 {
-      font-weight: 500;
-    }
-
-    h6 {
-      font-weight: 300;
-    }
-
-    .ttsLogo {
-      @include responsive (phone) {
-        width: 142px;
-        height: auto;
-      }
-
-      width: 100%;
-      height: auto;
-    }
-  }
-
-
-
-  .footerSocialMedia {
-
-    display: flex;
-    gap: 16px;
-
-
+  h5 {
+    font-weight: 500;
+    cursor: pointer;
   }
 }
